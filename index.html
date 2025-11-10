@@ -13,6 +13,7 @@
     <div id="main">
 
         <div id="mainDiv">
+            <div class="settings-btn" id="openSettings" title="Settings">⚙️</div>
             <div id="player1" class="player">
 
                 <div class="detailsAndTotScore">
@@ -58,6 +59,62 @@
     </div>
 
 
+
+    <!-- Themed Modals -->
+    <div class="modal-overlay" id="nameModal">
+        <div class="modal-card">
+            <h2>Start New Game</h2>
+            <div class="modal-body">
+                <label for="nameInput1">Player 1 Name</label>
+                <input id="nameInput1" type="text" placeholder="Player 1" />
+                <label for="nameInput2">Player 2 Name</label>
+                <input id="nameInput2" type="text" placeholder="Player 2" />
+            </div>
+            <div class="modal-actions">
+                <button class="btn" id="startGameBtn">Start</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="winModal">
+        <div class="modal-card">
+            <h2 id="winText">Player Wins!</h2>
+            <div class="modal-actions">
+                <button class="btn" id="winNewGameBtn">New Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Drawer -->
+    <div class="side-overlay" id="settingsOverlay">
+        <div class="side-panel">
+            <div class="side-header">
+                <h3>Game Menu</h3>
+                <button class="close-btn" id="closeSettings">×</button>
+            </div>
+            <div class="side-nav">
+                <button class="side-tab-btn active" data-tab="settings">Settings</button>
+                <button class="side-tab-btn" data-tab="how">How to Play</button>
+            </div>
+            <div class="side-content">
+                <div class="tab-view" id="tab-settings">
+                    <label for="matchPointInput">Match Point</label>
+                    <input type="number" id="matchPointInput" min="1" step="1" placeholder="e.g., 10" />
+                    <div class="helper-text">Enter a positive integer.</div>
+                    <button class="btn" id="saveMatchPointBtn">Save</button>
+                </div>
+                <div class="tab-view hidden" id="tab-how">
+                    <h4>How to Play</h4>
+                    <ul class="how-list">
+                        <li>Click Roll Dice to roll; the number adds to Current.</li>
+                        <li>Rolling 1 resets Current and passes the turn.</li>
+                        <li>Click Hold to add Current to Total and pass turn.</li>
+                        <li>First to reach Match Point wins the game.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>

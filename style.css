@@ -362,3 +362,52 @@
 .how-list li { margin-bottom: 8px; }
 
 @keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0%); } }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    #main { min-height: 100vh; height: auto; }
+    #mainDiv {
+        width: 95%;
+        height: auto;
+        padding: 12px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .player {
+        width: 100%;
+        height: auto;
+        padding: 10px 8px;
+        margin: 6px 0;
+    }
+    .detailsAndTotScore { font-size: 28px; }
+    .detailsAndTotScore h1 { font-size: 56px; }
+    .turnScore { padding: 16px 24px; }
+
+    /* Reposition centre controls */
+    #centreArea {
+        position: static;
+        left: auto; top: auto;
+        transform: none;
+        width: 100%;
+        height: auto;
+        padding: 8px 12px;
+        gap: 8px;
+    }
+    #diceImg { width: 50%; }
+    .btn { width: 100%; padding: 14px 16px; }
+    #playerTurnText { font-size: 16px; }
+    .settings-btn { top: 8px; right: 8px; width: 36px; height: 36px; }
+
+    /* Drawer full width */
+    .side-panel { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .detailsAndTotScore { font-size: 22px; }
+    .detailsAndTotScore h1 { font-size: 42px; }
+    #diceImg { width: 70%; }
+    .btn { font-size: 15px; padding: 12px 14px; }
+    .side-header { padding: 14px 16px; }
+    .side-nav { padding: 6px 16px; }
+    .tab-view input { padding: 12px; }
+}

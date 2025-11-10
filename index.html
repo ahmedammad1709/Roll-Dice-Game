@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="main">
+
+        <div id="mainDiv">
+            <div id="player1" class="player">
+
+                <div class="detailsAndTotScore">
+                    <h3 id="player1Name">Player 1</h3>
+                    <h1 id="player1-total-score">0</h1>
+                </div>
+                <div class="turnScore">
+                    <h2>Current</h2>
+                    <h1 id="player1-current-score">0</h1>
+                </div>
+
+
+            </div>
+            <div id="player2" class="player">
+                <div class="detailsAndTotScore">
+                    <h3 id="player2Name">Player 2</h3>
+                    <h1 id="player2-total-score">0</h1>
+                </div>
+                <div class="turnScore">
+                    <h2>Current</h2>
+                    <h1 id="player2-current-score">0</h1>
+                </div>
+
+
+            </div>
+
+            <div id="centreArea">
+                <div class="btn" onclick="resetGame()">New Game</div>
+                <div>
+                    <h2 id="playerTurnText">Player 1 turn </h2>
+                </div>
+                <div id="diceImg">
+                    <img src="./assets/1.png" alt="Dice">
+                </div>
+
+                <div class="btn" onclick="generateNumber()">Roll Dice</div>
+
+                <div class="btn" onclick="AddPlayerScore()">
+                    Hold
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+
+</html>
